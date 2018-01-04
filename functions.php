@@ -52,17 +52,52 @@ function setting_twitter() { ?>
   <input type="text" name="twitter" id="twitter" value="<?php echo get_option( 'twitter' ); ?>" />
 <?php }
 
+function setting_github() { ?>
+  <input type="text" name="github" id="github" value="<?php echo get_option('github'); ?>" />
+<?php }
+
+function setting_facebook() { ?>
+  <input type="text" name="facebook" id="facebook" value="<?php echo get_option('facebook'); ?>" />
+<?php }
+
+function setting_instagram() { ?>
+  <input type="text" name="instagram" id="instagram" value="<?php echo get_option('instagram'); ?>" />
+<?php }
+
 function custom_settings_page_setup() {
   add_settings_section( 'section', 'All Settings', null, 'theme-options' );
    add_settings_field( 'twitter', 'Twitter URL', 'setting_twitter', 'theme-options', 'section' );
    add_settings_field( 'github', 'GitHub URL', 'setting_github', 'theme-options', 'section' );
+   add_settings_field( 'facebook', 'Facebook URL', 'setting_facebook', 'theme-options', 'section' );
+   add_settings_field( 'instagram', 'Instagram URL', 'setting_instagram', 'theme-options', 'section' );
    
- 	register_setting( 'section', 'twitter' );
-   register_setting( 'section', 'github' );
+  register_setting( 'section', 'twitter' );
+  register_setting( 'section', 'github' );
+   register_setting( 'section', 'facebook' );
+   register_setting( 'section', 'instagram' );
 }
 add_action( 'admin_init', 'custom_settings_page_setup' );
 
+// Support Featured Images
+add_theme_support( 'post-thumbnails' );
 
-function setting_github() { ?>
-  <input type="text" name="github" id="github" value="<?php echo get_option('github'); ?>" />
-<?php }
+
+// Custom Post Type
+function create_my_custom_post() {
+  register_post_type( 'my-custom-post',
+      array(
+      'labels' => array(
+          'name' => __( 'My Custom Post' ),
+          'singular_name' => __( 'My Custom Post' ),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array(
+          'title',
+          'editor',
+          'thumbnail',
+          'custom-fields'
+      )
+  ));
+}
+add_action( 'init', 'create_my_custom_post' );
