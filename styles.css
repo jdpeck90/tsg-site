@@ -1,0 +1,216 @@
+/*
+Theme Name: Twenty Fourteen
+Theme URI: http://wordpress.org/themes/twentyfourteen
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: twentyfourteen
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* line 5, ../../../../../.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/* mixins.scss */
+/*_variables.scss */
+/*_typography.scss*/
+/* line 2, sass/_partials/_typography.scss */
+body {
+  color: #000;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 16px; }
+
+/*==============================
+=            GLOBAL            =
+==============================*/
+/* line 29, sass/styles.scss */
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
+
+/* line 34, sass/styles.scss */
+.site-header__wrapper {
+  width: 40%;
+  float: right;
+  text-align: center;
+  padding: 2rem 0 2rem 0; }
+
+/* line 40, sass/styles.scss */
+p {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  background-color: transparent;
+  box-shadow: unset; }
+
+/*=====  End of GLOBAL  ======*/
+/* line 52, sass/styles.scss */
+.section:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0; }
+/* line 62, sass/styles.scss */
+.section:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: rgba(237, 119, 52, 0.5);
+  top: 0;
+  right: 0; }
+
+/* line 74, sass/styles.scss */
+.site-header__nav {
+  width: 60%;
+  float: right;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid black;
+  justify-content: space-evenly;
+  margin: 30px 3%;
+  position: relative; }
+
+/* line 87, sass/styles.scss */
+nav a {
+  color: #FFF;
+  display: block;
+  text-decoration: none;
+  padding: 20px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+/* line 98, sass/styles.scss */
+nav {
+  background-image: none; }
+  /* line 101, sass/styles.scss */
+  nav li:first-of-type a {
+    color: black; }
+
+/* line 107, sass/styles.scss */
+#fp-nav ul li .fp-tooltip {
+  position: absolute;
+  top: -2px;
+  color: #000;
+  font-size: 14px;
+  font-family: arial, helvetica, sans-serif;
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: hidden;
+  display: block;
+  opacity: 0;
+  width: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600; }
+
+/* line 125, sass/styles.scss */
+ul.menu {
+  display: flex;
+  flex-direction: row-reverse; }
+
+/* line 130, sass/styles.scss */
+.site-header__logo {
+  position: absolute;
+  left: 5%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; }
+
+/* line 140, sass/styles.scss */
+.slide__brand-container {
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+  max-height: 70px;
+  align-items: center; }
+
+/* line 149, sass/styles.scss */
+.slide__brand-logo {
+  max-width: 230px;
+  transition: 400ms all ease; }
+  /* line 153, sass/styles.scss */
+  .slide__brand-logo:hover {
+    opacity: 0.7; }
+
+/* line 158, sass/styles.scss */
+.fp-slide.fp-table {
+  position: relative; }
+
+/* line 162, sass/styles.scss */
+.slide__brand-container .slide__brand-content-wrapper p {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center; }

@@ -1,2 +1,2 @@
-# TSG Site - Learning Custom Wordpress Dev
-
+# bbird-fullpager
+BBird FullPager is a theme based on fullPage.js library and ACF Pro

@@ -1,0 +1,170 @@
+/*
+Theme Name: Twenty Fourteen
+Theme URI: http://wordpress.org/themes/twentyfourteen
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: twentyfourteen
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+ 
+@import "compass";
+@import "compass/reset";
+// Here we import our partials
+@import "_partials/mixins";
+@import "_partials/variables";
+@import "_partials/typography";
+
+
+
+
+/*==============================
+=            GLOBAL            =
+==============================*/
+h1 {
+	font-family: $font-family__primary;
+	font-weight: $font-weight__light;
+}
+
+.site-header__wrapper {
+	width: 40%;
+	float: right;
+	text-align: center;
+	padding: 2rem 0 2rem 0;
+}
+p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    background-color: transparent;
+    box-shadow: unset;
+}
+
+/*=====  End of GLOBAL  ======*/
+
+
+.section{
+	&:before {
+	    content: '';
+	    display: block;
+	    position: absolute;
+	    width: 80%;
+	    height: 100%;
+	    background: rgba(0,0,0,0.5);
+	    left: 0;
+	    top: 0;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 20%;
+		height: 100%;
+		background: rgba(237,119,52, 0.5);
+		top:0;
+		right:0;
+	}
+}
+
+.site-header__nav {
+    width: 60%;
+    float: right;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid black;
+    justify-content: space-evenly;
+    margin: 30px 3%;
+    position: relative;
+}
+
+nav a {
+	color: #FFF;
+    display: block;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+nav {
+    background-image: none;
+    
+	li:first-of-type a {
+	    color: black;
+	}
+}
+
+
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -2px;
+    color: #000;
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+ul.menu {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.site-header__logo {
+    position: absolute;
+    left: 5%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.slide__brand-container {
+	width: 90%;
+	margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    max-height: 70px;
+    align-items: center;
+}
+
+.slide__brand-logo {
+	max-width: 230px;
+	transition: $transition__primary;
+
+	&:hover {
+		opacity: $opacity__primary;
+	}
+}
+
+.fp-slide.fp-table {
+	position: relative;
+}
+
+.slide__brand-container .slide__brand-content-wrapper p {
+	visibility: hidden;
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	text-align: center;
+
+}
