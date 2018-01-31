@@ -1,9 +1,23 @@
 jQuery(document).ready(function($) {
+
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
+
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+
        $('#fullpage').fullpage({
         //Navigation
         menu: '#menu',
         //Add more anchors if required, but i think that 10 will do for the most projects :)
-        sectionsColor: ['transparent', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent', '#ransparent'],
                 anchors: ['Design', 'Innovation', 'Development', 'Sourcing'],
                 menu: '#menu',
                 scrollingSpeed: 2700,
@@ -12,7 +26,7 @@ jQuery(document).ready(function($) {
                 navigationTooltips:  ['Design', 'Innovation', 'Development', 'Sourcing'],
                 showActiveTooltip: true,
                 slidesNavigation: true,
-                slidesNavPosition: 'top',
+                slidesNavPosition: 'bottom',
         
             //Scrolling
         css3: true,

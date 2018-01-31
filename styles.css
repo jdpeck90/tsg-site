@@ -79,22 +79,26 @@ body {
   font-weight: 300;
   line-height: 16px; }
 
+/* line 24, sass/styles.scss */
+* {
+  box-sizing: border-box; }
+
 /*==============================
 =            GLOBAL            =
 ==============================*/
-/* line 29, sass/styles.scss */
+/* line 31, sass/styles.scss */
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 300; }
 
-/* line 34, sass/styles.scss */
+/* line 36, sass/styles.scss */
 .site-header__wrapper {
   width: 40%;
   float: right;
   text-align: center;
   padding: 2rem 0 2rem 0; }
 
-/* line 40, sass/styles.scss */
+/* line 42, sass/styles.scss */
 p {
   color: #fff;
   font-size: 14px;
@@ -103,7 +107,7 @@ p {
   box-shadow: unset; }
 
 /*=====  End of GLOBAL  ======*/
-/* line 52, sass/styles.scss */
+/* line 54, sass/styles.scss */
 .section:before {
   content: '';
   display: block;
@@ -112,8 +116,9 @@ p {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   left: 0;
+  z-index: 2;
   top: 0; }
-/* line 62, sass/styles.scss */
+/* line 65, sass/styles.scss */
 .section:after {
   content: '';
   display: block;
@@ -124,7 +129,7 @@ p {
   top: 0;
   right: 0; }
 
-/* line 74, sass/styles.scss */
+/* line 77, sass/styles.scss */
 .site-header__nav {
   width: 60%;
   float: right;
@@ -136,8 +141,17 @@ p {
   justify-content: space-evenly;
   margin: 30px 3%;
   position: relative; }
+  /* line 89, sass/styles.scss */
+  .site-header__nav:before {
+    content: '';
+    position: absolute;
+    height: 104%;
+    border: 2px solid #ed7734;
+    width: 71.8%;
+    left: 0;
+    border-right: 0px; }
 
-/* line 87, sass/styles.scss */
+/* line 100, sass/styles.scss */
 nav a {
   color: #FFF;
   display: block;
@@ -147,14 +161,14 @@ nav a {
   font-weight: 600;
   text-transform: uppercase; }
 
-/* line 98, sass/styles.scss */
+/* line 111, sass/styles.scss */
 nav {
   background-image: none; }
-  /* line 101, sass/styles.scss */
+  /* line 114, sass/styles.scss */
   nav li:first-of-type a {
     color: black; }
 
-/* line 107, sass/styles.scss */
+/* line 120, sass/styles.scss */
 #fp-nav ul li .fp-tooltip {
   position: absolute;
   top: -2px;
@@ -171,12 +185,12 @@ nav {
   cursor: pointer;
   font-weight: 600; }
 
-/* line 125, sass/styles.scss */
+/* line 138, sass/styles.scss */
 ul.menu {
   display: flex;
   flex-direction: row-reverse; }
 
-/* line 130, sass/styles.scss */
+/* line 143, sass/styles.scss */
 .site-header__logo {
   position: absolute;
   left: 5%;
@@ -185,7 +199,7 @@ ul.menu {
   align-items: center;
   justify-content: space-evenly; }
 
-/* line 140, sass/styles.scss */
+/* line 153, sass/styles.scss */
 .slide__brand-container {
   width: 90%;
   margin: 0 auto;
@@ -194,19 +208,28 @@ ul.menu {
   max-height: 70px;
   align-items: center; }
 
-/* line 149, sass/styles.scss */
+/* line 162, sass/styles.scss */
 .slide__brand-logo {
+  max-height: 180px;
   max-width: 230px;
   transition: 400ms all ease; }
-  /* line 153, sass/styles.scss */
+  /* line 167, sass/styles.scss */
   .slide__brand-logo:hover {
     opacity: 0.7; }
 
-/* line 158, sass/styles.scss */
+/* line 172, sass/styles.scss */
+#myVideo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%; }
+
+/* line 180, sass/styles.scss */
 .fp-slide.fp-table {
   position: relative; }
 
-/* line 162, sass/styles.scss */
+/* line 184, sass/styles.scss */
 .slide__brand-container .slide__brand-content-wrapper p {
   visibility: hidden;
   position: absolute;

@@ -21,7 +21,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "_partials/typography";
 
 
-
+* {
+    box-sizing: border-box;
+}
 
 /*==============================
 =            GLOBAL            =
@@ -57,6 +59,7 @@ p {
 	    height: 100%;
 	    background: rgba(0,0,0,0.5);
 	    left: 0;
+	    z-index: 2;
 	    top: 0;
 	}
 	&:after {
@@ -82,6 +85,16 @@ p {
     justify-content: space-evenly;
     margin: 30px 3%;
     position: relative;
+
+    &:before {
+	    content: '';
+	    position: absolute;
+	    height: 104%;
+	    border: 2px solid rgba(237, 119, 52, 1);
+	    width: 71.8%;
+	    left: 0;
+	    border-right: 0px;
+    }
 }
 
 nav a {
@@ -97,7 +110,7 @@ nav a {
 
 nav {
     background-image: none;
-    
+
 	li:first-of-type a {
 	    color: black;
 	}
@@ -147,12 +160,21 @@ ul.menu {
 }
 
 .slide__brand-logo {
+	max-height: 180px;
 	max-width: 230px;
 	transition: $transition__primary;
 
 	&:hover {
 		opacity: $opacity__primary;
 	}
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100%; 
+    min-height: 100%;
 }
 
 .fp-slide.fp-table {

@@ -49,7 +49,12 @@ if( have_rows('layout') ):
         
     $sectionID++;
        ?>
-    <div id="section<?php echo $sectionID; ?>" class="section" style="background-image:url(<?php echo $url; ?>) ">
+
+    <div id="section<?php echo $sectionID; ?>" class="section" >
+    <video data-autoplay loop id="myVideo">
+      <source data-src="<?php bloginfo('template_directory'); ?>/videos/video<?php echo $sectionID; ?>.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
        <h1><?php the_sub_field('anchor'); ?></h1>
         <?php
            // display a sub field value
@@ -113,6 +118,21 @@ else :
 endif;
 ?>
       </div>
+      <script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
 
 </div> <!-- section -->
 </div><!-- .site-content -->
